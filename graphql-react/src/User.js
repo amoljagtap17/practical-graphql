@@ -32,19 +32,25 @@ const Collapsible = ({ data }) => {
       <div className="collapsible-body">
         <ul className="collection with-header">
           <li className="collection-header">
-            <h5>Owned Cars:</h5>
+            {car.length === 0 ? (
+              <h5>No cars owned yet!</h5>
+            ) : (
+              <h5>Owned Cars:</h5>
+            )}
           </li>
-          {car.map(({ id, make, model, colour }) => (
-            <li className="collection-item" key={id}>
-              {make} - {model}
-              <span
-                className={`new badge ${colour.trim().toLowerCase()}`}
-                data-badge-caption="color"
-              >
-                {colour}
-              </span>
-            </li>
-          ))}
+
+          {car.length > 0 &&
+            car.map(({ id, make, model, colour }) => (
+              <li className="collection-item" key={id}>
+                {make} - {model}
+                <span
+                  className={`new badge ${colour.trim().toLowerCase()}`}
+                  data-badge-caption="color"
+                >
+                  {colour}
+                </span>
+              </li>
+            ))}
         </ul>
       </div>
     </li>
@@ -71,3 +77,4 @@ const User = () => {
 }
 
 export default User
+export { USERS }

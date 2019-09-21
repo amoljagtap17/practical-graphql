@@ -2,6 +2,7 @@ import React from 'react'
 
 import ApolloProvider from './ApolloProvider'
 import User from './User'
+import AddUserModal from './AddUserModal'
 
 const App = () => (
   <ApolloProvider>
@@ -16,10 +17,14 @@ const App = () => (
       <User />
     </div>
     <div className="fixed-action-btn">
-      <button className="btn-floating btn-large red">
+      <button
+        data-target="addUserModal"
+        className="btn modal-trigger btn-floating btn-large red"
+      >
         <i className="large material-icons">add</i>
       </button>
     </div>
+    <AddUserModal />
   </ApolloProvider>
 )
 
