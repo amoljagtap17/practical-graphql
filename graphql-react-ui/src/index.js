@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
 
+import 'materialize-css/dist/css/materialize.min.css'
+
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
