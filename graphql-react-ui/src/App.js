@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navigation from './Navigation'
-import Login from './login'
-import Register from './Register'
+import Login from './Login/login'
+import Register from './Register/Register'
 
 const App = () => (
   <Router>
